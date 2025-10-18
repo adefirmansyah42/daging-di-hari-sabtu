@@ -12,7 +12,7 @@
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --border-radius: 12px;
+  --border-radius: 12px;
 }
 
 body{
@@ -112,7 +112,39 @@ body{
   max-width: 500px;
 }
 
-/* Modernisasi btn hero Section */
-.btn {
-  display: inline-block;
+/* Tentang DDS */
+
+
+.tentang-dds .container {
+  text-align: left;
+}
+
+.tentang-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.tentang-text p{
+  flex: 1;
+}
+
+.tentang-image img{
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tentang-text p{
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: var(--color-text-light);
+  max-width: 1000px;
+}
+
+.tentang-dds h2{
+  text-align: center;
+  color: var(--color-secondary-light);
+  font-size: 2.5em;
 }
