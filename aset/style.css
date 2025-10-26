@@ -15,6 +15,9 @@
   --border-radius: 12px;
 }
 
+/* #e53935 */
+/* #2c3e50 */
+
 body{
   margin: 0;
   padding: 0;
@@ -30,18 +33,19 @@ body{
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 800;
+  font-size: 25px;
 }
 
 /* NAVBAR */
 
 .navbar {
-  padding: 15px 0;
+  padding: 8 px 0;
   position: sticky;
   top: 0;
   z-index: 10000;
   transition: background-color 0.3s ease;
-  background-color: var(--color-background);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
   border-bottom: 2px solid #eee;
 }
 
@@ -61,15 +65,38 @@ body{
 }
 
 .navbar .nav-links li a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: none ;
   font-weight: 600; 
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
 }
+
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--color-primary);
+}
+
 
 /* Section hero */
 
 .hero {
-  padding: 30px 0;
+  padding: 10px 0;
   min-height: 90vh;
   display: flex;
   align-items:center;
@@ -93,7 +120,7 @@ body{
 }
 
 .hero-image img {
-  width: 100%;
+  width: 85%;
   height: auto;
 }
 
@@ -112,8 +139,26 @@ body{
   max-width: 500px;
 }
 
-/* Tentang DDS */
+.btn-primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: inline-block;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
 
+
+.btn-primary:hover{
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* Tentang DDS */
 
 .tentang-dds .container {
   text-align: left;
@@ -121,8 +166,9 @@ body{
 
 .tentang-content {
   display: flex;
-  gap: 60px;
+  gap: 0px;
   align-items: center;
+  padding: 30px;
 }
 
 .tentang-text p{
@@ -130,21 +176,324 @@ body{
 }
 
 .tentang-image img{
-  max-width: 100%;
+  width: 600px;
+  max-width: 85%;
   height: auto;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
 }
 
 .tentang-text p{
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 20px;
   color: var(--color-text-light);
   max-width: 1000px;
+  text-align: justify;
 }
+
+.highlight {
+  color: var(--color-primary); 
+  font-weight: 700;
+}
+
 
 .tentang-dds h2{
   text-align: center;
+  color: var(--color-secondary);
+  font-size: 2.8em;
+  margin-bottom: 40px;
+}
+
+/* Jadwal Daging */
+
+.jadwal-daging{
+  padding: 30px 0;
+  top: 0;
+  z-index: 10000;
+  background-color: var(--color-background);
+}
+
+.jadwal-daging .jadwal-card{
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 6px solid var(--color-primary);
+}
+
+.jadwal-card .tag{
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-white);
+  padding: 6px 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.jadwal-daging .container h2{
+  font-size: 2.8em;
+  text-align: center;
+  color: var(--color-secondary);
+  margin-bottom: 40px;
+}
+
+.jadwal-card h3{
+  font-size: 1.8em;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+}
+
+.jadwal-card p{
+  margin-bottom: 8px;
+  font-size: 1em;
   color: var(--color-secondary-light);
-  font-size: 2.5em;
+}
+
+.jadwal-card .btn{
+  margin-top: 25px;
+}
+
+.btn.secondary{
+  display: inline-block;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.btn.secondary{
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn.secondary:hover{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ini card arsip & jadwal daging */
+
+.card{
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  text-align: left;
+  border: 3px solid rgba(229, 57, 53, 1);
+  margin-bottom: 22px;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+/* Arsip Daging */
+
+
+.grid-card{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.arsip-daging h2{
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 2.8em;
+}
+
+.arsip-card h3{
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.arsip-card p{
+  font-size: 0.95em;
+  margin-bottom: 5px;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.btn.small{
+  margin-top: 20px;
+  padding: 12px 28px;
+  text-decoration: none;
+  color: var(--color-secondary);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 3px solid transparent;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.btn.btn.small{
+  background-color: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn.small:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Para Koki */
+
+.grid-card-koki{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+.para-koki{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.para-koki h3{
+  color: var(--color-secondary);
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.para-koki .keahlian{
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.para-koki h2{
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 2.8em;
+}
+
+.koki-card{
+  text-align: center;
+}
+
+.koki-card .koki-img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--color-secondary);
+  box-shadow: var(--shadow);
+}
+
+/* gabung */
+
+.gabung{
+  background-color: var(--color-secondary-light);
+  padding: 30px;
+  text-align: center;
+}
+
+.gabung h2{
+  color: var(--color-white);
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gabung p{
+  max-width: 700px;
+  color: var(--color-white);
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.gabung-btn {
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-primary-large{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.btn-primary-large:hover{
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* responsive? */
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8em;
+  }
+
+  .hero-image {
+      margin-bottom: 30px;
+  }
+
+  .tentang-content {
+      flex-direction: column;
+  }
+
+  .tentang-image {
+      margin-top: 30px;
+  }
+    
+  section {
+      padding: 80px 0;
+  }
+
+  section h2 {
+      font-size: 2.2em;
+  }
+
+  .grid-card {
+      grid-template-columns: 1fr;
+  }
 }

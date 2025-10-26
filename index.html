@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./aset/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -27,18 +28,24 @@
     </nav>
 
     <!-- Section hero -->
+
      <section id="home" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
+            <div 
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            class="hero-text">
             <h1>Daging Dihari Sabtu</h1>
             <p>
                 Satu-satunya 'Daging' yang bikin kenyang otak, bukan perut. Selamat datang di sesi nutrisi skill.
             </p>
-            <a href="#jadwalDaging" class="btn primary">Lihat Menu Daging</a>
+            <a href="#jadwalDaging" class="btn-primary">Lihat Menu Daging</a>
         </div>
         <div class="hero-image">
             <img 
-            src="./aset/img/hero.png" 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            src="./aset/img/img-hero.png" 
             alt="ilustrasi Komunitas Belajar"
             >
         </div>
@@ -46,46 +53,176 @@
      </section>
 
      <!-- Section Tentang DDS -->
+
      <section id="tentang-dds" class="tentang-dds">
         <div class="container">
-            <h2>Apasih "Daging di Hari Sabtu" itu 🥩</h2>
+            <h2 
+                data-aos="zoom-in-up"
+                data-aos-duration="1000">
+                Apasih <span class="highlight">Daging Dihari Sabtu</span> itu? 🥩</h2>
             <div class="tentang-content">
-                <div class="tentang-text">
-                <p>
-                    DDS lahir dari obrolan simpel: "Gimana caranya biar kita bisa jago
-                    bareng-bareng tanpa harus ikut bootcamp mahal?"
-                </p>
-                <p>
-                    Di sini, kita percaya semua orang punya 'daging'-nya 
-                    masing-masing. Makanya, DDS itu bukan kelas satu arah. Ini adalah 
-                    wadah buat siapa aja yang mau berbagi ilmu, skill, atau pengalaman.
-                </p>
-                <p>
-                    Setiap Sabtu, kita kumpul buat 'masak' bareng—ngebahas satu topik 
-                    sampe tuntas. Santai, interaktif, dan dijamin isinya berkualitas.
-                </p>
-                </div>
-                <div class="tentang-image">
+                <div 
+                    data-aos="zoom-in-right"
+                    data-aos-duration="1500"
+                    class="tentang-image">
                     <img src="./aset/img/img-1.png" alt="">
+                </div>
+                <div 
+                    data-aos="zoom-in-left"
+                    data-aos-duration="1500"
+                    class="tentang-text">
+                <p>
+                    DDS (Daging Dihari Sabtu) itu sebenernya ruang belajar bareng yang lahir dari keinginan buat berkembang, tapi tanpa harus keluar duit gede ikut bootcamp mahal. Di sini siapa aja bebas berbagi ilmu, pengalaman, atau cara pandang lo sendiri.</p>
+                <p>
+                   Setiap hari Sabtu kita ngumpul buat bahas satu topik, santai tapi tetap bermakna. Bukan cuma dengerin teori doang, tapi lebih ke saling sharing pengalaman nyata biar sama-sama berkembang.</p>
+                <p>
+                    DDS itu komunitas yang tumbuh bareng-bareng, dari kita untuk kita. Selama lo punya niat buat belajar dan berbagi, lo udah cocok masuk di sini.</p>
                 </div>
             </div>
         </div>
      </section>
 
      <!-- Jadwal Daging -->
+
       <section id="jadwal-daging" class="jadwal-daging">
         <div class="container">
-            <h2>Menu Daging Terdekat 🥩</h2>
-            <div class="card jadwal-card">
+            <h2 data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                >Menu Daging Terdekat 🥩</h2>
+            <div 
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                class="card jadwal-card">
                 <span class="tag">WEB DEV</span>
                 <h3>Bedah Tuntas CSS Flexbox & Grid</h3>
-                <p class="tanngal"></p>
-                <p class="koki"></p>
-                <p class="deskripsi"></p>
+                <p class="tanngal">Sabtu, 18 Oktober 2025</p>
+                <p class="koki">Oleh: Chef Nizar(FrontEnd Developer)</p>
+                <p class="deskripsi">Di sesi ini kita bakal ngulik dua senjata andalan di CSS buat bikin layout modern: Flexbox sama Grid. Yuk kita pelajarin bareng-bareng biar bikin layout responsif jadi makin gampang!</p>
                 <a href="#" class="btn secondary">Link Zoom</a>
             </div>
         </div>
-
       </section>
+
+      <!-- Arsip Daging -->
+
+      <section id="arsip-daging" class="arsip-daging">
+        <div 
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            class="container">
+            <h2>Daging Yang Udah Matang🥩</h2>
+            <div class="grid-card">
+                <div    
+                    data-aos="fade-up"
+                    data-aos-duration="600"
+                    class="card arsip-card">
+                    <h3>HTML Dasar: Pondasi Web</h3>
+                    <p class="koki">Oleh: Chef Nizar</p>
+                    <p class="tanggal">5 Juli 2025</p>
+                    <p href="#" class="btn small">Lihat Materi</p>
+                </div>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    class="card arsip-card">
+                    <h3>Intro to JavaScript</h3>
+                    <p class="koki">Oleh: Chef Nizar</p>
+                    <p class="tanggal">12 Juli 2025</p>
+                    <p href="#" class="btn small">Lihat Materi</p>
+                </div>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    class="card arsip-card">
+                    <h3>Cara Investasi Tanpa Pusing</h3>
+                    <p class="koki">Oleh: Chef Murphy</p>
+                    <p class="tanggal">19 Juli 2025</p>
+                    <p href="#" class="btn small">Lihat Materi</p>
+                </div>
+                <div 
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    class="card arsip-card">
+                    <h3>Alur Barang di Gudang DC</h3>
+                    <p class="koki">Oleh: Chef Fadillah</p>
+                    <p class="tanggal">26 Juli 2025</p>
+                    <p href="#" class="btn small">Lihat Materi</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Para Koki -->
+
+       <section id="para-koki" class="para-koki">
+        <div 
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            class="container">
+            <h2>Chef-Chef Andalan DDS🧑🏻‍🍳</h2>
+            <div class="grid-card-koki">
+                <div
+                    data-aos="flip-up"
+                    data-aos-duration="700"
+                    class="card koki-card">
+                    <img src="./aset/img/chef-nizar.png" alt="Foto Chef Nizar" class="koki-img">
+                    <h3>Chef Nizar</h3>
+                    <p class="keahlian">FrontEnd Developer</p>
+                </div>
+                <div 
+                    data-aos="flip-up"
+                    data-aos-duration="900"
+                    class="card koki-card">
+                    <img src="./aset/img/chef-asep.png" alt="Foto Chef Asep" class="koki-img">
+                    <h3>Chef Asep</h3>
+                    <p class="keahlian">BackEnd Engineer</p>
+                </div>
+                <div 
+                    data-aos="flip-up"
+                    data-aos-duration="1100"
+                    class="card koki-card">
+                    <img src="./aset/img/chef-murphy.png" alt="Foto Chef Murphy" class="koki-img">
+                    <h3>Chef Murphy</h3>
+                    <p class="keahlian">Investasi & finance</p>
+                </div>
+                <div 
+                    data-aos="flip-up"
+                    data-aos-duration="1300"
+                    data-aos-once="value true"
+                    class="card koki-card">
+                    <img src="./aset/img/chef-fadillah.png" alt="Foto Chef Fadillah" class="koki-img">
+                    <h3>Chef Fadillah</h3>
+                    <p class="keahlian">Inventory Control</p>
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <!-- Gabung Kelas-->
+
+        <section id="gabung" class="gabung">
+            <div class="container">
+                <h2>Tertarik ikutan Masak? 🔥</h2>
+                <p>Diskusi gak berhenti pas sesi selesai. Di circle kita, lo bisa nanya-nanya, share project, atau sekadar cari temen buat tukar pikiran dan cari solusi bareng.</p>
+                <div class="gabung-btn">
+                    <a href="#" class="btn-primary-large">Masuk ke Dapur</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+         
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Dibuat dengan semangat berbagi. Daging di Hari Sabtu.</p>
+            </div>
+        </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
 </body>
 </html>
