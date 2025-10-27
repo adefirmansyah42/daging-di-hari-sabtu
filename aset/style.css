@@ -59,6 +59,7 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 10000;
+  width: 100%;
   transition: background-color 0.3s ease;
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(3px);
@@ -511,6 +512,13 @@ html, body {
 }
 
 /* responsive? */
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
 
 @media (max-width: 768px) {
 
