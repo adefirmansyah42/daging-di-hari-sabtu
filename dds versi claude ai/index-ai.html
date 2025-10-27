@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daging Dihari Sabtu</title> <!-- FIXED: Ganti dari "Document" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,16 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">DDS</a>
-            <ul class="nav-links">
+            
+            <!-- ADDED: Hamburger icon untuk mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- ADDED: id="navLinks" untuk JavaScript -->
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#tentang">Tentang</a></li>
                 <li><a href="#jadwal">Jadwal</a></li>
@@ -28,32 +37,31 @@
     </nav>
 
     <!-- Section hero -->
-
-     <section id="home" class="hero">
+    <section id="home" class="hero">
         <div class="container hero-content">
             <div 
             data-aos="fade-right"
             data-aos-duration="1000"
             class="hero-text">
-            <h1>Daging Dihari Sabtu</h1>
-            <p>
-                Satu-satunya 'Daging' yang bikin kenyang otak, bukan perut. Selamat datang di sesi nutrisi skill.
-            </p>
-            <a href="#jadwal" class="btn-primary">Lihat Menu Daging</a>
+                <h1>Daging Dihari Sabtu</h1>
+                <p>
+                    Satu-satunya 'Daging' yang bikin kenyang otak, bukan perut. Selamat datang di sesi nutrisi skill.
+                </p>
+                <a href="#jadwal" class="btn-primary">Lihat Menu Daging</a>
+            </div>
+            <div class="hero-image">
+                <img 
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                src="./aset/img/img-hero.png" 
+                alt="ilustrasi Komunitas Belajar"
+                >
+            </div>
         </div>
-        <div class="hero-image">
-            <img 
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            src="./aset/img/img-hero.png" alt="ilustrasi Komunitas Belajar"
-            >
-        </div>
-        </div>
-     </section>
+    </section>
 
-     <!-- Section Tentang DDS -->
-
-     <section id="tentang" class="tentang-dds">
+    <!-- Section Tentang DDS -->
+    <section id="tentang" class="tentang-dds">
         <div class="container">
             <h2 
                 data-aos="zoom-in-up"
@@ -64,26 +72,26 @@
                     data-aos="zoom-in-right"
                     data-aos-duration="1500"
                     class="tentang-image">
-                    <img src="./aset/img/img-1.png" alt="">
+                    <img src="./aset/img/img-1.png" alt="Ilustrasi komunitas belajar">
+                    <!-- FIXED: Tambah alt text yang proper -->
                 </div>
                 <div 
                     data-aos="zoom-in-left"
                     data-aos-duration="1500"
                     class="tentang-text">
-                <p>
-                    DDS itu ada karena kebanyakan dari kita kuliah sambil kerja, tapi materi kampus kadang nggak cukup buat bikin kita benar-benar nangkep gambaran realnya. Banyak dari kita yang sebenernya butuh ruang buat nanya, nyocokin teori sama pengalaman nyata, dan belajar pelan-pelan tanpa takut dibilang telat paham.</p>
-                <p>
-                    Masalahnya, alternatif lain kayak bootcamp memang ada… tapi nggak semua orang siap keluar biaya segitu, apalagi kalau masih tahap bangun dasar dulu. Di situlah DDS akhirnya kebentuk: ruang aman buat belajar bareng tanpa harus keluar biaya.</p>
-                <p>
-                    Jadi DDS ini bukan komunitas formal, lebih ke circle belajar yang saling narik maju. Lu dateng bawa pengalaman kerja atau rasa penasaran, dan bareng-bareng kita jadiin itu ilmu yang kepake. Pelan, tapi nyata.</p>
+                    <p>
+                        DDS itu ada karena kebanyakan dari kita kuliah sambil kerja, tapi materi kampus kadang nggak cukup buat bikin kita benar-benar nangkep gambaran realnya. Banyak dari kita yang sebenernya butuh ruang buat nanya, nyocokin teori sama pengalaman nyata, dan belajar pelan-pelan tanpa takut dibilang telat paham.</p>
+                    <p>
+                        Masalahnya, alternatif lain kayak bootcamp memang ada… tapi nggak semua orang siap keluar biaya segitu, apalagi kalau masih tahap bangun dasar dulu. Di situlah DDS akhirnya kebentuk: ruang aman buat belajar bareng tanpa harus keluar biaya.</p>
+                    <p>
+                        Jadi DDS ini bukan komunitas formal, lebih ke circle belajar yang saling narik maju. Lu dateng bawa pengalaman kerja atau rasa penasaran, dan bareng-bareng kita jadiin itu ilmu yang kepake. Pelan, tapi nyata.</p>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
-     <!-- Jadwal Daging -->
-
-      <section id="jadwal" class="jadwal-daging">
+    <!-- Jadwal Daging -->
+    <section id="jadwal" class="jadwal-daging">
         <div class="container">
             <h2 data-aos="zoom-in-up"
                 data-aos-duration="1000"
@@ -100,11 +108,10 @@
                 <a href="#" class="btn secondary">Link Zoom</a>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Arsip Daging -->
-
-      <section id="arsip" class="arsip-daging">
+    <!-- Arsip Daging -->
+    <section id="arsip" class="arsip-daging">
         <div 
             data-aos="zoom-in-up"
             data-aos-duration="1000"
@@ -118,7 +125,8 @@
                     <h3>HTML Dasar: Pondasi Web</h3>
                     <p class="koki">Oleh: Chef Nizar</p>
                     <p class="tanggal">5 Juli 2025</p>
-                    <p href="#" class="btn small">Lihat Materi</p>
+                    <!-- FIXED: Ganti <p> jadi <a> -->
+                    <a href="#" class="btn small">Lihat Materi</a>
                 </div>
                 <div 
                     data-aos="fade-up"
@@ -127,7 +135,8 @@
                     <h3>Intro to JavaScript</h3>
                     <p class="koki">Oleh: Chef Nizar</p>
                     <p class="tanggal">12 Juli 2025</p>
-                    <p href="#" class="btn small">Lihat Materi</p>
+                    <!-- FIXED: Ganti <p> jadi <a> -->
+                    <a href="#" class="btn small">Lihat Materi</a>
                 </div>
                 <div 
                     data-aos="fade-up"
@@ -136,7 +145,8 @@
                     <h3>Cara Investasi Tanpa Pusing</h3>
                     <p class="koki">Oleh: Chef Murphy</p>
                     <p class="tanggal">19 Juli 2025</p>
-                    <p href="#" class="btn small">Lihat Materi</p>
+                    <!-- FIXED: Ganti <p> jadi <a> -->
+                    <a href="#" class="btn small">Lihat Materi</a>
                 </div>
                 <div 
                     data-aos="fade-up"
@@ -145,15 +155,15 @@
                     <h3>Alur Barang di Gudang DC</h3>
                     <p class="koki">Oleh: Chef Fadillah</p>
                     <p class="tanggal">26 Juli 2025</p>
-                    <p href="#" class="btn small">Lihat Materi</p>
+                    <!-- FIXED: Ganti <p> jadi <a> -->
+                    <a href="#" class="btn small">Lihat Materi</a>
                 </div>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Para Koki -->
-
-       <section id="koki" class="para-koki">
+    <!-- Para Koki -->
+    <section id="koki" class="para-koki">
         <div 
             data-aos="zoom-in-up"
             data-aos-duration="1000"
@@ -187,6 +197,8 @@
                 <div 
                     data-aos="fade-up"
                     data-aos-duration="1200"
+                    data-aos-once="true"
+                    <!-- FIXED: Hapus "value" dari attribute -->
                     class="card koki-card">
                     <img src="./aset/img/chef-fadillah.png" alt="Foto Chef Fadillah" class="koki-img">
                     <h3>Chef Fadillah</h3>
@@ -194,28 +206,26 @@
                 </div>
             </div>
         </div>
-       </section>
+    </section>
 
-       <!-- Gabung Kelas-->
-
-        <section id="gabung" class="gabung">
-            <div class="container">
-                <h2>Tertarik ikutan Masak? 🔥</h2>
-                <p>Kalau lu mau lanjut ngobrol atau butuh bantuan setelah sesi, ya tinggal tanya aja. Di sini kita bukan cuma belajar pas live-nya doang, tapi saling bantu kalau lagi stuck juga. Kalau lu ngerasa butuh circle kayak gini, tinggal masuk aja.</p>
-                <div class="gabung-btn">
-                    <a href="https://forms.gle/auFHR9r2dDhGmcZu5" class="btn-primary-large">Masuk ke Dapur</a>
-                </div>
+    <!-- Gabung Kelas-->
+    <section id="gabung" class="gabung">
+        <div class="container">
+            <h2>Tertarik ikutan Masak? 🔥</h2>
+            <p>Kalau lu mau lanjut ngobrol atau butuh bantuan setelah sesi, ya tinggal tanya aja. Di sini kita bukan cuma belajar pas live-nya doang, tapi saling bantu kalau lagi stuck juga. Kalau lu ngerasa butuh circle kayak gini, tinggal masuk aja.</p>
+            <div class="gabung-btn">
+                <a href="https://forms.gle/auFHR9r2dDhGmcZu5" class="btn-primary-large">Masuk ke Dapur</a>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dibuat dengan semangat berbagi. Daging di Hari Sabtu.</p>
+        </div>
+    </footer>
 
-        <!-- Footer -->
-         
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2025 Dibuat dengan semangat berbagi. Daging di Hari Sabtu.</p>
-            </div>
-        </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -223,7 +233,7 @@
         });
     </script>
 
-        <!-- ADDED: JavaScript untuk hamburger menu -->
+    <!-- ADDED: JavaScript untuk hamburger menu -->
     <script>
         // Ambil element hamburger dan nav-links
         const hamburger = document.getElementById('hamburger');

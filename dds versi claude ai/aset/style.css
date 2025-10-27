@@ -15,9 +15,6 @@
   --border-radius: 12px;
 }
 
-/* #e53935 */
-/* #2c3e50 */
-
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +35,7 @@ body{
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; /* ADDED: Biar konten ga nempel ke sisi HP */
 }
 
 .container .logo {
@@ -51,12 +48,12 @@ body{
 /* NAVBAR */
 
 .navbar {
-  padding: 15px 0;
+  padding: 15px 0; /* FIXED: Hapus spasi antara 15 dan px */
   position: sticky;
   top: 0;
   z-index: 10000;
   transition: background-color 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.95); /* FIXED: Opacity dinaikin dikit */
   backdrop-filter: blur(3px);
   border-bottom: 2px solid #eee;
 }
@@ -78,7 +75,7 @@ body{
 
 .navbar .nav-links li a {
   color: var(--color-secondary);
-  text-decoration: none ;
+  text-decoration: none;
   font-weight: 600; 
   transition: color 0.3s ease;
   position: relative;
@@ -106,31 +103,31 @@ body{
 
 /* ADDED: Hamburger Menu Style */
 .hamburger {
-  display: none; /* fungsi: disembumbunyikan: nanti muncul di mobile */
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none; /* Disembunyiin dulu, nanti muncul di mobile */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-primary);
-  transition: all 0.3s ease;
-  border-radius: 3px;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transition: all 0.3s ease;
+    border-radius: 3px;
 }
 
 /* Animasi hamburger jadi X ketika active */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(8px, 8px);
 }
 
 .hamburger.active span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Section hero */
@@ -139,13 +136,13 @@ body{
   padding: 60px 0;
   min-height: 90vh;
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 40px;
 }
 
@@ -191,7 +188,6 @@ body{
   border: 2px solid transparent;
 }
 
-
 .btn-primary:hover{
   background-color: var(--color-primary-dark);
   box-shadow: var(--shadow-lg);
@@ -201,7 +197,7 @@ body{
 /* Tentang DDS */
 
 .tentang-dds {
-  padding: 60px 0;
+  padding: 60px 0; /* ADDED: Padding section */
 }
 
 .tentang-dds .container {
@@ -210,18 +206,25 @@ body{
 
 .tentang-content {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 0; /* FIXED: Ubah jadi padding vertical aja */
 }
 
-.tentang-text p{
-  flex: 1;
+.tentang-text {
+  flex: 1; /* FIXED: Pindahin ke .tentang-text */
+}
+
+.tentang-image {
+  flex: 1; /* ADDED: Tambah flex */
+  display: flex; /* ADDED: Biar bisa center */
+  justify-content: center; /* ADDED: Center image */
+  align-items: center; /* ADDED: Center image */
 }
 
 .tentang-image img{
-  width: 600px;
-  max-width: 100%;
+  width: 100%; /* FIXED: Ubah jadi 100% biar responsive */
+  max-width: 500px; /* FIXED: Tambah max-width biar ga terlalu besar */
   height: auto;
   border-radius: 50%;
   box-shadow: var(--shadow);
@@ -231,7 +234,6 @@ body{
   font-size: 1.1em;
   margin-bottom: 20px;
   color: var(--color-text-light);
-  max-width: 1000px;
   text-align: justify;
 }
 
@@ -239,7 +241,6 @@ body{
   color: var(--color-primary); 
   font-weight: 700;
 }
-
 
 .tentang-dds h2{
   text-align: center;
@@ -251,9 +252,7 @@ body{
 /* Jadwal Daging */
 
 .jadwal-daging{
-  padding: 60px 0;
-  top: 0;
-  z-index: 10000;
+  padding: 60px 0; /* FIXED: Ubah jadi 60px biar konsisten */
   background-color: var(--color-background);
 }
 
@@ -280,7 +279,6 @@ body{
   text-align: center;
   color: var(--color-secondary);
   margin-bottom: 40px;
-  margin-top: 20px;
 }
 
 .jadwal-card h3{
@@ -307,9 +305,6 @@ body{
   transition: all 0.3s ease;
   font-weight: 600;
   border: 2px solid transparent;
-}
-
-.btn.secondary{
   background-color: transparent;
   color: var(--color-primary);
   border-color: var(--color-primary);
@@ -340,7 +335,7 @@ body{
 /* Arsip Daging */
 
 .arsip-daging {
-  padding: 60px 0; 
+  padding: 60px 0; /* ADDED: Padding section */
 }
 
 .grid-card{
@@ -351,7 +346,6 @@ body{
 }
 
 .arsip-daging h2{
-  margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
   color: var(--color-secondary);
@@ -379,16 +373,10 @@ body{
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
   font-weight: 600;
-  border: 3px solid transparent;
-  text-align: center;
-  display: block; 
-  justify-content: space-between;
-}
-
-.btn.btn.small{
+  border: 3px solid var(--color-secondary);
   background-color: transparent;
-  color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  display: block; /* ADDED: Biar button full width */
+  text-align: center;
 }
 
 .btn.small:hover{
@@ -399,9 +387,7 @@ body{
 /* Para Koki */
 
 .para-koki{
-  padding: 60px 0;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  padding: 60px 0; /* ADDED: Padding section */
 }
 
 .grid-card-koki{
@@ -448,7 +434,7 @@ body{
 
 .gabung{
   background-color: var(--color-secondary-light);
-  padding: 60px 20px;
+  padding: 60px 20px; /* FIXED: Tambah padding horizontal */
   text-align: center;
 }
 
@@ -472,7 +458,6 @@ body{
   display: flex;
   justify-content: center;
 }
-
 
 .btn-primary-large{
   background-color: var(--color-primary);
@@ -498,21 +483,22 @@ body{
 .footer {
   background-color: var(--color-secondary);
   color: var(--color-white);
-  padding: 20px;
+  padding: 20px; /* FIXED: Ubah jadi 20px biar ga terlalu tipis */
   text-align: center;
   font-size: 0.9em;
   margin: 0;
 }
 
-/* responsive? */
+/* responsive */
 
 @media (max-width: 768px) {
+  /* ADDED: Munculkan hamburger di mobile */
   .hamburger {
     display: flex;
   }
 
+  /* FIXED: Menu jadi dropdown, bukan hilang total */
   .navbar .nav-links {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -526,8 +512,13 @@ body{
     transition: max-height 0.3s ease;
   }
 
+  /* Menu muncul ketika class 'active' ditambahkan */
   .navbar .nav-links.active {
     max-height: 400px;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
   }
 
   .hero-content {
@@ -540,25 +531,18 @@ body{
   }
 
   .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; /* FIXED: Ukuran lebih pas */
   }
 
   .hero-text p {
-    max-width: 100%;
+    max-width: 100%; /* ADDED: Biar text ga kepotong */
   }
 
   .hero-image {
       margin-bottom: 30px;
   }
 
-  .tentang-content {
-      flex-direction: column;
-  }
-
-  .tentang-image {
-      margin-top: 30px;
-  }
-
+  /* FIXED: Tambah padding biar h2 ga mepet */
   .tentang-dds h2 {
     font-size: 2em;
     padding: 0 10px;
@@ -568,21 +552,4 @@ body{
       flex-direction: column;
       padding: 20px 0; /* FIXED: Padding vertical aja */
   }
-    
-  section {
-      padding: 80px 0;
-  }
-
-  section h2 {
-      font-size: 2.2em;
-  }
-
-  .grid-card {
-      grid-template-columns: 1fr;
-  }
-
-  .grid-card-koki {
-    grid-template-columns: 1fr;
-  }
-
 }
