@@ -35,6 +35,10 @@ body{
   font-family: var(--font-family);
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -75,6 +79,7 @@ body{
 
 .navbar .nav-links li {
   margin-left: 35px;
+  margin: 15px 0;
 }
 
 .navbar .nav-links li a {
