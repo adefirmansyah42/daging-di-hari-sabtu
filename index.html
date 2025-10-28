@@ -230,19 +230,19 @@
         });
     </script>
 
-        <!-- ADDED: JavaScript untuk hamburger menu -->
+        <!-- js buat hamburger menu -->
     <script>
-        // Ambil element hamburger dan nav-links
+        // ambil element hamburger dan nav-links
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
 
-        // Ketika hamburger di-klik, toggle class 'active'
+        //Ketika hamburger di-klik, toggle class 'active'
         hamburger.addEventListener('click', function() {
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
 
-        // Tutup menu ketika link di-klik
+        // tutup menu ketika link di-klik
         const links = navLinks.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', () => {
@@ -251,7 +251,7 @@
             });
         });
 
-        // Tutup menu ketika klik di luar navbar
+        // tutup menu ketika klik di luar navbar
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                 hamburger.classList.remove('active');
